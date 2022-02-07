@@ -1,0 +1,94 @@
+@import 'variables.scss';
+
+header {
+    background-color: $navigation-color;
+    width: 300px;
+    height: 100vh;
+    .logo {
+        text-align: center;
+        padding: 20px;
+    }
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 0 20px;   
+        height: 1000px;
+        nav {
+            li {
+                line-height: 20px;
+                padding: 16px 0;
+
+                .nav-link {
+                    font-family: $regular-font;
+                    color: $navigation-text-color;  
+
+                    &:hover {
+                        color: $white-text;
+                    }
+                       
+                    &.active {
+                        color: $white-text;
+                    }
+                }
+                .link-icon {
+                    width: 20px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .nav-footer {
+            margin-top: auto;
+            text-align: center;
+            .progress-bar {
+                text-align: center;
+                padding-bottom: 50px;
+                .capasity {
+                    display: flex;
+                    justify-content: space-between;
+                    label {
+                        font-family: $regular-font;
+                        color: $white-text;
+                    }
+                    .add-icon {
+                        width: 20px;
+                    }
+                }
+                progress {
+                    width: 100%;
+                    border-radius: 1px; 
+                    height: 3px;
+                    box-shadow: 1px 1px 4px rgba( 0, 0, 0, 0.2 );
+                    
+                    &::-webkit-progress-bar {
+                        background-color: #373f55;
+                    }
+                    &::-webkit-progress-value {
+                        background-color: $light-green-color;
+                        border-radius: 7px;
+                    }
+                }   
+            }
+            .btn {
+                width: 100%;
+                text-align: center;
+                padding: 10px 20px;
+                border: 2px solid $light-green-color;
+                border-radius: 10px;
+                color: $white-text;
+                font-family: $regular-font;
+                font-size: 1rem;
+                position: relative;
+                &::before {
+                    content: url('img/arrow.png');
+                    position: absolute;
+                    left: 20px;
+                }
+                &:hover {
+                    background-color: $light-green-color;
+                }
+            }
+        }
+    }
+}

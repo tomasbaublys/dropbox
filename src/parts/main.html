@@ -1,0 +1,41 @@
+<main>
+    <div class="container">
+      <div class="main-header">
+        <div class="search">
+          <form action="#" id="filters">
+            <input type="text" id="search" class="search" placeholder="Search..." />
+          </form>
+        </div>
+        <div class="alert">
+          <select id="user">
+            <option value="user1">Eddie Lobanovskij</option>
+          </select>
+        </div>
+      </div>
+      
+      <h1>Photos</h1>
+
+      <div class="control-section">
+        <div class="left">
+          <label>
+            <img src="img/upload_file.png">
+            <input id="uploadBtn" type="file" accept="image/png image/jpg image/jpeg" multiple style="display: none;">
+          </label>
+          <a href="#"><img class="control-icon" src="img/new_folder.png" alt=""></a>
+          <a href="#"><img class="control-icon" src="img/share_folder.png" alt=""></a>
+          <label for="">
+            <img id="delete" src="img/delete.png" alt="">
+            <button style="display: none;">Remove child</button>
+          </label>
+        </div>
+        <div class="right">
+          <button class="btn" onclick="sortByName()">Name</button>
+          <button class="btn" onclick="sortBysize()">Size</button>
+          <button class="btn" onclick="">Modified</button>
+        </div>
+      </div>
+        
+        @@include('photo-item.html')
+
+    </div>
+</main>

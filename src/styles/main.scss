@@ -1,0 +1,104 @@
+@import 'variables.scss';
+
+main {
+    width: 100%;
+    padding: 0 20px;
+    .main-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px solid rgb(233, 233, 233);
+        .search {
+            position: relative;
+            &::before {
+                content: url('img/seach.png');
+                position: absolute;
+                top: 4px;
+            }
+            input {
+                margin-left: 15px;
+                font-family: $regular-font;
+                border: none;
+                background-color: #f6f6f6;
+            }
+        }
+        .alert {
+            position: relative;
+            &::before {
+                content: url('img/alert.png');
+                position: absolute;
+                top: 2px;
+            }
+            select {
+                margin-left: 20px;
+                padding-right: 5px;
+                font-family: $regular-font;
+                background-color: #f6f6f6;
+                border: none;
+                position: relative;
+            }
+        }
+    }
+    h1 {
+        padding: 20px 0;
+        font-family: $regular-font;
+        font-size: $title-font-size;
+    }
+    .control-section {
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(233, 233, 233);
+        .left {
+            .control-icon {
+                padding: 0 4px;
+            }
+        }
+        .right {
+            .btn {
+                padding: 0 20px;
+                border: none;
+                background-color: #f6f6f6;
+                font-family: $regular-font;
+                padding: 3px 8px;
+
+                &.active {
+                    background-color: #444c63;
+                    border-radius: 3px;
+                    color: $white-text;
+                }
+                &:hover {
+                    background-color: #444c63;
+                    border-radius: 3px;
+                    color: $white-text;
+                }
+            }
+
+        }
+    }
+    .gallery {
+        padding: 25px 0;
+        display: flex;
+        flex-wrap: wrap;
+        .photo {
+            &:hover {
+                opacity:0.4;
+                background-color: #f9f9f9;
+                outline: 2px solid #dadada; 
+                border-radius: 3px;
+            }
+            img {
+                width: 160px;
+            }
+            padding: 10px;
+            .photo-title {
+                padding: 5px 0;
+                font-family: $regular-font;
+            }
+            .photo-capasity {
+                font-family: $regular-font; 
+                color: grey; 
+            }
+        }
+    }
+}

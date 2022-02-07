@@ -1,0 +1,33 @@
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="#"><img src="img/logo.png" alt=""></a>
+        </div>
+        <div class="nav-container">
+            <nav class="nav">
+                <ul>
+                    
+                    @@loop('nav-link.html',[
+                        { title:'Files', src:'img/file.png' },
+                        { title:'Photos', src:'img/Photos.png', link: 'index.html' },
+                        { title:'Users', src:'img/Sharing.png', link: 'users.html'},
+                        { title:'Links', src:'img/Links.png' },
+                        { title:'Events', src:'img/Events.png' },
+                        { title:'Getstarted', src:'img/Getstarted.png' },
+                    ])
+ 
+                </ul>
+            </nav>
+            <div class="nav-footer">
+                <div class="progress-bar">
+                    <div class="capasity">
+                        <label id="capacityVal" for="file">0 MB / 100 MB</label>
+                        <a href="#"><img class="add-icon" src="img/add.png" alt=""></a>
+                    </div> 
+                    <progress id="capacity" value="0" max="100"></progress>
+                </div>
+                <a class="btn" href="#">Upgrade account</a>
+            </div>
+        </div>   
+    </div>
+</header>       
